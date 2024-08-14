@@ -1,5 +1,5 @@
-#https://t.me/Y_o_v
-#_____@F_U_O
+#https://t.me/Z_l_7
+#_____@Z_l_7
 
 from pyrogram import Client, filters
 from YousefMusic.core.userbot import Userbot
