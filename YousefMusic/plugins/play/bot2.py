@@ -34,12 +34,7 @@ async def Mazen_bot(client, message):
     global name
     bot_username = (await app.get_me()).username
     bar = random.choice(Mazen_responses).format(name=name)
-    keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("تحديثات السورس ", url=f"https://t.me/ngd_1")]
-    ])
-    
     await message.reply_text(
-        text=f"**[{bar}](https://t.me/ngd_1)**",
+        text=f"**[{bar}],
         disable_web_page_preview=True,
-        reply_markup=keyboard,
     parse_mode=enums.ParseMode.MARKDOWN)
