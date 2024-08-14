@@ -22,10 +22,8 @@ def start_panel(_):
         ],
         [
             InlineKeyboardButton(
-                text="‹ مطور البوت ›", url=f"https://t.me/Z_l_7"
-            ),
-            InlineKeyboardButton(
-                text="‹ مطور السورس ›", url=f"https://t.me/Z_l_7"
+                text="Dev", url=f"https://t.me/Z_l_7"
+
             ),
         ],
     ]
@@ -48,9 +46,6 @@ def private_panel(_, OWNER_ID: Union[bool, int] = None):
         [
             InlineKeyboardButton(
                 text="‹ مطور البوت ›", url=f"https://t.me/Z_l_7"
-            ),
-            InlineKeyboardButton(
-                text="‹ مطور السورس ›", url=f"https://t.me/Z_l_7"
             ),
         ],
         [
