@@ -28,6 +28,5 @@ async def Mazen_bot(client, message):
     bot_username = (await app.get_me()).username
     bar = random.choice(Mazen_responses).format(name)
     await message.reply_text(
-        text=f"{bar}",
         disable_web_page_preview=True,
     parse_mode=enums.ParseMode.MARKDOWN)
