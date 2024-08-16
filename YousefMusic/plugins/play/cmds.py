@@ -1,7 +1,3 @@
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ ʑᴇʟᴢᴀʟ_ᴍᴜsɪᴄ ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯  T.me/ZThon   ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ T.me/Zelzal_Music ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
 import asyncio
 import os
 import requests
@@ -11,8 +7,8 @@ from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from pyrogram.errors import MessageNotModified
 from YousefMusic import app
-from config import OWNER_ID, LOGGER_ID
-
+from config import OWNER_ID, LOGGER_ID, START_IMG_URL
+import config
 
 @app.on_message(command(["ميوزك", "الميوزك", "الاوامر"]))
 async def zdatsr(client: Client, message: Message):
@@ -20,27 +16,25 @@ async def zdatsr(client: Client, message: Message):
     name = usr.first_name
     usrnam = usr.username
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/65ae4f8eed3deb620852b.jpg",
-        caption=f"""<b>» مرحبـاً بك عـزيـزي </b> {message.from_user.mention} .\n\n<b>» استخـدم الازرار بالاسفـل \n» لـ تصفـح اوامـر سورس ⁷⁷𝒏𝒂𝒋𝒅 🇸🇦</b>""",
+        photo=START_IMG_URL,
+        caption=f"""<b> -› مرحبا بك  </b> {message.from_user.mention} .\n\n<b>-› جميع اوامر البوت موجودة بالقائمة هذي ، اضغط الازرار الي تحت  \n واستكشف ياوحش
+ </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        " اوامــر التشغيــل ", callback_data="zzzll"),
+                        " اوامر التشغيل ", callback_data="zzzll"),
                 ],[
                     InlineKeyboardButton(
-                        " اوامـر القنـاة ", callback_data="zzzch"),
+                        " اوامرالقناه ", callback_data="zzzch"),
                     InlineKeyboardButton(
-                       " اوامـر الادمـن ", callback_data="zzzad"),
-                ],[ 
-                    InlineKeyboardButton(
-                        "𝐬𝐨𝐮𝐫𝐜𝐞 𝐚𝐥𝐢𝐜𝐞", url="https://t.me/ngd_1") 
+                        " اوامرالادمن ", callback_data="zzzad"),
+
                 ],[
                     InlineKeyboardButton(
-                        "رجـوع", callback_data="zzzback"), 
+                        text=config.CHANNEL_NAME, url=config.CHANNEL_LINK),
                 ],
             ]
         ),
     )
-
 
