@@ -42,7 +42,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/bblkt/bmusic")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Newwissam/Vvv")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN")
 CH_US = getenv("CH_US", "ngd_1")
